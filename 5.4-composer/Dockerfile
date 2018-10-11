@@ -9,7 +9,7 @@ RUN apt-get update \
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # copy Composer from official image to replace composer from base image
-COPY --from=0 /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 # add plugin
 RUN composer global require "hirak/prestissimo:^0.3"
 # remove cache

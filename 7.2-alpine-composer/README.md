@@ -13,4 +13,4 @@ pipeline:
       - php vendor/bin/phpunit
     environment:
       - SYMFONY_ENV=test
-```  
+```
