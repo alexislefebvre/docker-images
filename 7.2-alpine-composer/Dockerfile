@@ -9,3 +9,6 @@ COPY --from=0 /usr/bin/composer /usr/bin/composer
 RUN composer global require "hirak/prestissimo:^0.3"
 # remove cache
 RUN rm -rf /root/.composer/cache
+
+RUN apk add --no-cache libpng-dev
+RUN docker-php-ext-install gd
