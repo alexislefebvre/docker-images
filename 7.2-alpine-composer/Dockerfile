@@ -10,5 +10,6 @@ RUN composer global require "hirak/prestissimo:^0.3"
 # remove cache
 RUN rm -rf /root/.composer/cache
 
-RUN apk add --no-cache libpng-dev
+# git and unzip are necessary for Composer
+RUN apk add --no-cache git libpng-dev unzip
 RUN docker-php-ext-install gd
