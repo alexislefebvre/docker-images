@@ -13,4 +13,13 @@ pipeline:
       - php vendor/bin/phpunit
     environment:
       - SYMFONY_ENV=test
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: project
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpass
 ```
