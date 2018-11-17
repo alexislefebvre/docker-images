@@ -1,7 +1,7 @@
 # use composer from official image
 FROM composer:latest as composer
 
-FROM php:7.1-alpine
+FROM php:7.1-cli-alpine
 ENV COMPOSER_ALLOW_SUPERUSER=1
 # copy Composer from official image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
