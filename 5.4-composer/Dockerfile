@@ -4,11 +4,12 @@
 FROM composer:latest as composer
 
 FROM php:5.4-cli
-# unzip is for Composer, libicu-dev is for internationalization
+# git and unzip are necessary for Composer, libicu-dev is necessary for internationalization
 RUN apt-get update && \
     apt-get install -y \
-        libicu-dev \
-        unzip && \
+        git \
+        unzip \
+        libicu-dev && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/
 
 RUN docker-php-ext-install intl && \
