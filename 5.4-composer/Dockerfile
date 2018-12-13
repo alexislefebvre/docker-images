@@ -1,9 +1,7 @@
 # adapted from https://github.com/alterway/docker-php/blob/f1695cc9bb099fcbc2ec5dc104c12b2fa3bb0daa/5.4-cli/Dockerfile
 
-# use composer from official image
-FROM composer:latest as composer
-
 FROM php:5.4-cli
+
 # git and unzip are necessary for Composer, libicu-dev is necessary for internationalization
 RUN apt-get update && \
     apt-get install -y \
@@ -19,8 +17,9 @@ RUN docker-php-ext-install intl && \
     docker-php-ext-install pdo_mysql
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
+
 # copy Composer from official image
-COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 # add plugin then remove cache
 RUN composer global require "hirak/prestissimo:^0.3" && \
     rm -rf /root/.composer/cache

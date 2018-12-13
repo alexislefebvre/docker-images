@@ -1,10 +1,9 @@
-# use composer from official image
-FROM composer:latest as composer
-
 FROM php:7.2-cli-alpine
+
 ENV COMPOSER_ALLOW_SUPERUSER=1
+
 # copy Composer from official image
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # add plugin then remove cache
 RUN composer global require "hirak/prestissimo:^0.3" \
  && rm -rf /root/.composer/cache
