@@ -10,7 +10,6 @@ Images:
 - [7.1-alpine-composer-gd](7.1-alpine-composer-gd): Use this image with Drone
 - [7.2-alpine-composer](7.2-alpine-composer/): Use this image with Drone
 - [jakzal-phpqa-gd](jakzal-phpqa-gd/): Use this image with Drone to avoid error from PHPStan when GD functions are used
-- [xelatex](xelatex/): Use this image to use `xelatex`
 
 [Docker Hub]: https://hub.docker.com/r/alexislefebvre/docker-images/
 [Docker Hub Build Image]: https://img.shields.io/docker/build/alexislefebvre/docker-images.svg
