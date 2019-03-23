@@ -8,6 +8,7 @@ Images:
 
 - [5.4-composer](5.4-composer/): Use this image with Drone for legacy projects
 - [7.1-alpine-composer-gd](7.1-alpine-composer-gd): Use this image with Drone
+- [7.1-fpm-alpine-composer-soap-sass](7.1-fpm-alpine-composer-soap-sass): PHP 7.1 from Alpine Linux with Composer and SOAP
 - [7.2-alpine-composer](7.2-alpine-composer/): Use this image with Drone
 - [jakzal-phpqa-gd](jakzal-phpqa-gd/): Use this image with Drone to avoid error from PHPStan when GD functions are used
 
