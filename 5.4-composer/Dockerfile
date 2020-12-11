@@ -19,10 +19,7 @@ RUN docker-php-ext-install intl && \
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 # copy Composer from official image
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
-# add plugin then remove cache
-RUN composer global require "hirak/prestissimo:^0.3" && \
-    rm -rf /root/.composer/cache
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 # avoid error “Warning: date_default_timezone_get(): It is not safe to rely on the system's timezone settings.”
 # source: https://stackoverflow.com/questions/45587214/configure-timezone-in-dockerized-nginx-php-fpm/45587945#45587945
