@@ -1,4 +1,4 @@
-FROM jakzal/phpqa:php7.1-alpine
+FROM jakzal/phpqa:php7.4-alpine
 
 RUN apk add --no-cache freetype-dev libjpeg-turbo-dev libpng-dev \
  && docker-php-ext-install -j$(nproc) iconv \
