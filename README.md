@@ -14,6 +14,6 @@ Images:
 - [php-7.4-alpine-composer-gd](php-7.4-alpine-composer-gd): Use this image with Drone
 
 [Docker Hub]: https://hub.docker.com/r/alexislefebvre/docker-images/
-[Docker Hub Build Image]: https://img.shields.io/docker/build/alexislefebvre/docker-images.svg
+[Docker Hub Build Image]: https://img.shields.io/docker/cloud/build/alexislefebvre/docker-images.svg
 [Docker Hub Pulls Image]: https://img.shields.io/docker/pulls/alexislefebvre/docker-images.svg
 [Docker Hub Star Image]: https://img.shields.io/docker/stars/alexislefebvre/docker-images.svg
