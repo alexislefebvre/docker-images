@@ -5,7 +5,7 @@ Use this image with Drone by using this `.drone.yml`:
 ```yml
 pipeline:
   test:
-    image: alexislefebvre/docker-images:7.2-alpine-composer
+    image: ghcr.io/alexislefebvre/7.2-alpine-composer
     volumes:
       - composer-cache:/root/.composer
     commands:
