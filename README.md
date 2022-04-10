@@ -1,6 +1,6 @@
 # Docker images
 
-[![CI](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml/badge.svg)](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml)
+[![CI](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml/badge.svg)](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml?query=branch%3Amain)
 
 Images:
 
