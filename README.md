@@ -1,8 +1,6 @@
 # Docker images
 
-[Docker Hub ![Docker Hub][Docker Hub Build Image] ![Docker Hub][Docker Hub Pulls Image] ![Docker Hub][Docker Hub Star Image]][Docker Hub]
-
-[See all tags](https://hub.docker.com/r/alexislefebvre/docker-images/tags/)
+[![CI](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml/badge.svg)](https://github.com/alexislefebvre/docker-images/actions/workflows/push.yaml)
 
 Images:
 
@@ -12,8 +10,3 @@ Images:
 - [alpine-wait-for-it](alpine-wait-for-it/): Use this image with Drone to wait for another service
 - [jakzal-phpqa-gd](jakzal-phpqa-gd/): Use this image with Drone to avoid error from PHPStan when GD functions are used
 - [php-7.4-alpine-composer-gd](php-7.4-alpine-composer-gd): Use this image with Drone
-
-[Docker Hub]: https://hub.docker.com/r/alexislefebvre/docker-images/
-[Docker Hub Build Image]: https://img.shields.io/docker/cloud/build/alexislefebvre/docker-images.svg
-[Docker Hub Pulls Image]: https://img.shields.io/docker/pulls/alexislefebvre/docker-images.svg
-[Docker Hub Star Image]: https://img.shields.io/docker/stars/alexislefebvre/docker-images.svg
