@@ -11,3 +11,7 @@ RUN apk add --no-cache git unzip mysql-client \
  && docker-php-ext-configure gd --with-freetype --with-jpeg \
  && docker-php-ext-install -j$(nproc) gd \
  && docker-php-ext-install pdo_mysql
+
+# necessary for code coverage
+RUN apk add --no-cache autoconf gcc g++ make \
+ && pecl install pcov && docker-php-ext-enable pcov
