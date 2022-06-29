@@ -14,4 +14,5 @@ RUN apk add --no-cache git unzip mysql-client \
 
 # necessary for code coverage
 RUN apk add --no-cache autoconf gcc g++ make \
- && pecl install pcov && docker-php-ext-enable pcov
+ && pecl install pcov && docker-php-ext-enable pcov \
+ && echo "pcov.enabled=0" >> $PHP_INI_DIR/php.ini
