@@ -16,8 +16,6 @@ jobs:
       matrix:
         image:
             - 5.4-composer
-            - 7.1-alpine-composer-gd
-            - 7.2-alpine-composer
             - alpine-wait-for-it
             - jakzal-phpqa-gd
             - php-7.4-alpine-composer-gd
