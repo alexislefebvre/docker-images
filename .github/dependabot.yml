@@ -6,6 +6,14 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/alpine-wait-for-it"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/jakzal-phpqa-gd"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/php-7.4-alpine-composer-gd"
     schedule:
       interval: "weekly"
