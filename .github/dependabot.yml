@@ -9,11 +9,32 @@ updates:
     directory: "/alpine-wait-for-it"
     schedule:
       interval: "weekly"
+    commit-message:
+      include: "scope"
+      prefix: "docker"
   - package-ecosystem: "docker"
     directory: "/jakzal-phpqa-gd"
     schedule:
       interval: "weekly"
+    commit-message:
+      include: "scope"
+      prefix: "docker"
   - package-ecosystem: "docker"
     directory: "/php-7.4-alpine-composer-gd"
     schedule:
       interval: "weekly"
+    commit-message:
+      include: "scope"
+      prefix: "docker"
+
+# Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+    open-pull-requests-limit: 15
+    commit-message:
+      include: "scope"
+      prefix: "github-actions"
