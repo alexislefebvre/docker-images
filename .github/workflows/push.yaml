@@ -19,6 +19,7 @@ jobs:
             - alpine-wait-for-it
             - jakzal-phpqa-gd
             - php-7.4-alpine-composer-gd
+            - php-8.1-alpine-composer-gd
 
     steps:
       -
