@@ -29,7 +29,7 @@ jobs:
 
       -
         name: Build ${{ matrix.image }}
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: "{{defaultContext}}:${{ matrix.image }}"
           push: false
