@@ -4,7 +4,7 @@ FROM php:5.4-cli
 
 # git and unzip are necessary for Composer, libicu-dev is necessary for internationalization
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --force-yes \
         git \
         unzip \
         libicu-dev && \
