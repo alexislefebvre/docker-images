@@ -39,4 +39,4 @@ jobs:
         with:
           context: "{{defaultContext}}:${{ matrix.image }}"
           push: true
-          tags: ghcr.io/alexislefebvre/${{ matrix.image }}
+          tags: ghcr.io/alexislefebvre/${{ matrix.image }}:${{github.ref_name}}
