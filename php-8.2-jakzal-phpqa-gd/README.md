@@ -1,4 +1,4 @@
-# jakzal/pqpqa on PHP 8.1 with GD
+# jakzal/pqpqa on PHP 8.2 with GD
 
 Use this image with Drone by using this `.drone.yml`:
 
