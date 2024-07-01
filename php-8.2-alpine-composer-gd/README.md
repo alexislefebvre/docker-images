@@ -1,4 +1,4 @@
-# PHP 8.1 from Alpine Linux with Composer and GD
+# PHP 8.2 from Alpine Linux with Composer and GD
 
 Use this image with Drone by using this `.drone.yml`:
 
