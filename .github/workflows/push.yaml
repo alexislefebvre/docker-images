@@ -6,6 +6,9 @@ on:
       - 'main'
     tags:
       - '*'
+  workflow_dispatch:
+    branches:
+      - 'main'
 
 jobs:
   push:
