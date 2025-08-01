@@ -19,6 +19,13 @@ updates:
     commit-message:
       include: "scope"
       prefix: "docker"
+  - package-ecosystem: "docker"
+    directory: "/php-8.4-alpine-composer"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      include: "scope"
+      prefix: "docker"
 
 # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
