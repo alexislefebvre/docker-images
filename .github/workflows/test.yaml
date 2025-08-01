@@ -17,6 +17,7 @@ jobs:
         image:
             - alpine-wait-for-it
             - php-8.3-alpine-composer
+            - php-8.4-alpine-composer
 
     steps:
       -
