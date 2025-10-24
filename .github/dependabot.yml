@@ -15,14 +15,14 @@ updates:
   - package-ecosystem: "docker"
     directory: "/php-8.3-alpine-composer"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     commit-message:
       include: "scope"
       prefix: "docker"
   - package-ecosystem: "docker"
     directory: "/php-8.4-alpine-composer"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     commit-message:
       include: "scope"
       prefix: "docker"
