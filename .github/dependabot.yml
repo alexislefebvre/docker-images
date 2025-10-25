@@ -20,7 +20,7 @@ updates:
       include: "scope"
       prefix: "docker"
     ignore:
-      - dependency-name: "php"
+      - dependency-name: "*"
         versions: ["~> 8.4"]
   - package-ecosystem: "docker"
     directory: "/php-8.4-alpine-composer"
@@ -30,7 +30,7 @@ updates:
       include: "scope"
       prefix: "docker"
     ignore:
-      - dependency-name: "php"
+      - dependency-name: "*"
         versions: ["~> 8.5"]
 
 # Maintain dependencies for GitHub Actions
