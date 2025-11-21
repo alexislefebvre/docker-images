@@ -23,6 +23,7 @@ jobs:
           - alpine-wait-for-it
           - php-8.3-alpine-composer
           - php-8.4-alpine-composer
+          - php-8.5-alpine-composer
 
     steps:
       - name: Set up Docker Buildx
