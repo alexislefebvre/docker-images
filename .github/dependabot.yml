@@ -32,6 +32,16 @@ updates:
     ignore:
       - dependency-name: "php"
         versions: ["~> 8.5"]
+  - package-ecosystem: "docker"
+    directory: "/php-8.5-alpine-composer"
+    schedule:
+      interval: "daily"
+    commit-message:
+      include: "scope"
+      prefix: "docker"
+    ignore:
+      - dependency-name: "php"
+        versions: ["~> 8.6"]
 
 # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
