@@ -21,7 +21,7 @@ updates:
       prefix: "docker"
     ignore:
       - dependency-name: "php"
-        versions: ["8.4.x", "8.5.x", "8.6.x", "8.7.x", "8.8.x"]
+        versions: ["~> 8.4"]
   - package-ecosystem: "docker"
     directory: "/php-8.4-alpine-composer"
     schedule:
@@ -31,7 +31,7 @@ updates:
       prefix: "docker"
     ignore:
       - dependency-name: "php"
-        versions: ["8.5.x", "8.6.x", "8.7.x", "8.8.x"]
+        versions: ["~> 8.5"]
 
 # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
