@@ -4,9 +4,9 @@
 
 Images:
 
-- [alpine-wait-for-it](alpine-wait-for-it/): Use this image with Drone to wait for another service
-- [php-8.3-alpine-composer](php-8.3-alpine-composer): Use this image with GitHub actions or Drone
-- [php-8.4-alpine-composer](php-8.4-alpine-composer): Use this image with GitHub actions or Drone
-- [php-8.5-alpine-composer](php-8.5-alpine-composer): Use this image with GitHub actions or Drone
+- [alpine-wait-for-it](./alpine-wait-for-it): Wait for another service
+- [php-8.3-alpine-composer](./php-8.3-alpine-composer): Test with PHP 8.3
+- [php-8.4-alpine-composer](./php-8.4-alpine-composer): Test with PHP 8.4
+- [php-8.5-alpine-composer](./php-8.5-alpine-composer): Test with PHP 8.5
 
-A complete list of all images is available here: https://github.com/alexislefebvre?tab=packages&repo_name=docker-images
+A complete list of all past and present images is available here: https://github.com/alexislefebvre?tab=packages&repo_name=docker-images
