@@ -5,7 +5,6 @@
 Images:
 
 - [alpine-wait-for-it](./alpine-wait-for-it): Wait for another service
-- [php-8.3-alpine-composer](./php-8.3-alpine-composer): Test with PHP 8.3
 - [php-8.4-alpine-composer](./php-8.4-alpine-composer): Test with PHP 8.4
 - [php-8.5-alpine-composer](./php-8.5-alpine-composer): Test with PHP 8.5
 
