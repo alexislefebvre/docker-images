@@ -19,10 +19,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image:
-          - alpine-wait-for-it
-          - php-8.4-alpine-composer
-          - php-8.5-alpine-composer
+        image: [ 'alpine-wait-for-it', 'php-8.5-alpine-composer' ]
+        include:
+          - image: php-8.4-alpine-composer
+            target: base
 
     steps:
       - name: Set up Docker Buildx
@@ -36,6 +36,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push ${{ matrix.image }}
+        if: matrix.target == ''
         uses: docker/build-push-action@v6
         with:
           context: "{{defaultContext}}:${{ matrix.image }}"
@@ -43,3 +44,24 @@ jobs:
           tags: |
             ghcr.io/alexislefebvre/${{ matrix.image }}:${{ github.ref_name }}
             ghcr.io/alexislefebvre/${{ matrix.image }}:latest
+
+      - name: Build and push ${{ matrix.image }} with target ${{ matrix.target }}
+        if: matrix.target != ''
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:${{ matrix.image }}"
+          target: ${{ matrix.target }}
+          push: true
+          tags: |
+            ghcr.io/alexislefebvre/${{ matrix.image }}:${{ github.ref_name }}
+            ghcr.io/alexislefebvre/${{ matrix.image }}:latest
+
+      - name: Build and push ${{ matrix.image }} without target
+        if: matrix.target != ''
+        uses: docker/build-push-action@v6
+        with:
+          context: "{{defaultContext}}:${{ matrix.image }}"
+          push: true
+          tags: |
+            ghcr.io/alexislefebvre/${{ matrix.image }}-mariadb-wiremock:${{ github.ref_name }}
+            ghcr.io/alexislefebvre/${{ matrix.image }}-mariadb-wiremock:latest
